@@ -1,12 +1,18 @@
-import React from "react";
+import React from 'react';
+import MainHero from "../../../src/sections/about/main-hero/mainHero";
+import AllProducts from "../../../src/sections/shop/all-products/allProducts"; 
+import Badges from '../../../src/sections/shop/Badges/badges';
 
 const About = () => {
-    return (
-        <div>
-            <h1>About Us</h1>
-            <p>Welcome to the About page. Learn more about our story here!</p>
-        </div>
-    );
-};
+  return (
+    <>
+      {/* Main Hero Section */}
+      <MainHero />
+      <AllProducts /> 
+      <Badges/>
+      
+    </>
+  );
+}
 
 export default About;

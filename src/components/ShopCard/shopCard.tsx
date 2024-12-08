@@ -14,7 +14,7 @@ const shopCard = ({ image, title, subtitle }: CardProps) => {
     <PCRCard>
       <CUCardContent>
         <CUIBox>
-          <Image src={image} width={53} height={60} alt="" />
+          <Image src={image} width={55} height={65} alt="" />
         </CUIBox>
         <TBox>
           <PCTTypography variant="h4"> {title}</PCTTypography>

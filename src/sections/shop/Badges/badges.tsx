@@ -13,52 +13,42 @@ const Badges = () => {
   return (
     <Box
       sx={{
-        paddingTop: "5%",
-        backgroundColor:"#FAF3EA"
+        // paddingTop: "5%",
+        backgroundColor:"#FAF3EA",
+        margin:"20px 0px"
       }}
     >
-      {/* <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <PCTypograpghy variant="h2">Why Choose Us?</PCTypograpghy>
-        <Image src={Rectangle} width={190} height={12} alt="" />
-      </Box> */}
-
+     
       <Stack>
         <Grid container spacing={0}>
-          <Grid xl={4} lg={4} md={4} sm={6} xs={12}>
+          <Grid xl={4} lg={3} md={3} sm={6} xs={12}>
             <ShopCard
               image={Trophy}
-              title="Potential ROI"
-              subtitle="Whether you are looking to buy a fixer-upper or renovate your current home for sale, we will walk you through potential returns for projects."
+              title="High Quality"
+              subtitle="crafted from top materials"
             />
           </Grid>
 
-          <Grid xl={4} lg={4} md={4} sm={6} xs={12}>
+          <Grid xl={4} lg={3} md={3} sm={6} xs={12}>
             <ShopCard
               image={Gurantee}
-              title="Design"
-              subtitle="Our background in interior design makes the perfect guide through your design options and coordinating contractors to complete the home upgrade."
+              title="Warranty Protection"
+              subtitle="Over 2 years"
             />
           </Grid>
 
-          <Grid xl={4} lg={4} md={4} sm={6} xs={12}>
+          <Grid xl={4} lg={3} md={3} sm={6} xs={12}>
             <ShopCard
               image={freeSheeping}
-              title="Marketing"
-              subtitle="Staging consultation, professional photos and a sophisticated digital marketing plan accompany every listing to reach today’s buyers."
+              title="Free Shipping"
+              subtitle="Order over 150 $."
             />
           </Grid>
-          <Grid xl={4} lg={4} md={4} sm={6} xs={12}>
+          <Grid xl={4} lg={3} md={3} sm={6} xs={12}>
             <ShopCard
               image={CustomerSupport}
-              title="Marketing"
-              subtitle="Staging consultation, professional photos and a sophisticated digital marketing plan accompany every listing to reach today’s buyers."
+              title="24/7 Support"
+              subtitle="Dedicated support"
             />
           </Grid>
         </Grid>

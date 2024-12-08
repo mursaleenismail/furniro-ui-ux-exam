@@ -7,12 +7,9 @@ const Shop = () => {
     <>
       {/* Main Hero Section */}
       <MainHero />
-      <AllProducts /> {/* Use AllProducts instead of allProducts */}
+      <AllProducts /> 
       <Badges/>
-
-      {/* Additional Shop Page Content */}
-      {/* <h1>Shop</h1>
-      <p>Welcome to the About page. Learn more about our story here!</p> */}
+      
     </>
   );
 }
