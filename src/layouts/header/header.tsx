@@ -79,8 +79,27 @@ const Header = (props: Props) => {
           </ListItem>
         ))}
       </List>
+      {/* Closing the first Box */}
+      <Box sx={{ display: "flex", flexDirection: "row", padding: 2 }}>
+        <IconsBox sx={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 2 }}>
+          <ClickableIcon>
+            <Image src={Icon1} width={33} height={33} alt="Search Icon" />
+          </ClickableIcon>
+          <ClickableIcon>
+            <Image src={Icon2} width={23} height={23} alt="Notification Icon" />
+          </ClickableIcon>
+          <Badge badgeContent={4} color="warning">
+            <Link href="/cart" passHref>
+              <ClickableIcon style={{ cursor: "pointer" }}>
+                <Image src={Icon3} width={23} height={23} alt="Settings Icon" />
+              </ClickableIcon>
+            </Link>
+          </Badge>
+        </IconsBox>
+      </Box>
     </Box>
   );
+  
 
   const container =
     window !== undefined ? () => window().document.body : undefined;

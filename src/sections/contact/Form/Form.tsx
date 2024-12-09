@@ -25,21 +25,26 @@ const Form = () => {
         backgroundColor: "rgba(0, 0, 0, 0.05)",
       }}
     >
-      <Box
-        sx={{
-          margin: "30px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
-          alignItems: "center",
-          border: "3px solid #FFF",
-          width: "55%",
-          backgroundColor: "rgba(12, 42, 104, 0.15)",
-          borderRadius: "8px",
-          padding: "0px 30px",
-          boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.15)",
-        }}
-      >
+     <Box
+  sx={{
+    margin: "30px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    border: "3px solid #FFF",
+    width: "55%",
+    backgroundColor: "rgba(12, 42, 104, 0.15)",
+    borderRadius: "8px",
+    padding: {
+      xs: "5px",
+      sm: "5px", 
+      md: "5px", 
+      lg: "0px 30px", 
+    },
+    boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.15)",
+  }}
+>
         <Typography
           sx={{
             margin: " 30px 13px",

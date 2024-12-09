@@ -35,9 +35,37 @@ const ImageSection: React.FC = () => {
             {/* 1st Child Box - Image */}
             <Grid container spacing={3}>
               <Grid item xs={12} md={12}>
-                <Box sx={{ width: '817px', height: '520px', backgroundColor: '#f0f0f0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <img src={item.image} alt={item.title} style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                </Box>
+              <Box
+  sx={{
+    width: {
+      xs: '300px', // for extra-small screens
+      sm: '300px', // for small screens
+      md: '380px', // for medium screens
+      lg: '817px', // for large screens and above
+      xl: '817px', // for large screens and above
+    },
+    height: {
+      xs: '380px', // corresponding height for smaller screens
+      sm: '380px',
+      md: '380px',
+      lg: '520px',
+    },
+    backgroundColor: '#f0f0f0',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }}
+>
+  <img
+    src={item.image}
+    alt={item.title}
+    style={{
+      maxWidth: '100%',
+      maxHeight: '100%',
+    }}
+  />
+</Box>
+
               </Grid>
 
               {/* 2nd Child Box - Icon and Text */}

@@ -14,7 +14,20 @@ const WholeDetails = () => {
 
   return (
     <Container maxWidth="lg" sx={{ padding: 3 }}>
-      <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: 3 }}>
+      <Box
+  sx={{
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: 3,
+    flexDirection: {
+      xs: 'column', // Applies for xs and sm
+      sm: 'column',
+      md: 'row',    // Applies for md, lg, and xl
+      lg: 'row',
+      xl: 'row',
+    },
+  }}
+>
         <Button
           variant={activeSection === 'description' ? 'contained' : 'outlined'}
           color="success"
