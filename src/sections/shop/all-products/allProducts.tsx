@@ -6,6 +6,7 @@ import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
 import ProductCard from "@/components/ProductCard/productCard";
 import { allProductsData, ProductsData } from "@/Data/dummy";
+import Link from "next/link";
 
 
 const AllProducts = () => {
@@ -19,22 +20,22 @@ const AllProducts = () => {
           alignItems: "center",
         }}
       >
-        {/* <PCTypograpghy variant="h2">Our Products</PCTypograpghy> */}
-
-        
       </Box>
       <Stack>
       <ProjectsBox>
       <Grid container spacing={1}>
-        {allProductsData.map((item, index) => (
-          <Grid item key={index} xs={12} sm={6} md={4} lg={3} xl={3}>
-            <ProductCard project={item} />
-          </Grid>
-        ))}   
+      {allProductsData.map((item, index) => (
+  <Grid item key={index} xs={12} sm={6} md={4} lg={3} xl={3}>
+    <Link href={`/productpage/${item.id}`}>
+      
+        <ProductCard project={item} />
+    
+    </Link>
+  </Grid>
+))} 
       </Grid>
     </ProjectsBox>
       </Stack>
-
       <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
   <Box
     sx={{
@@ -46,11 +47,11 @@ const AllProducts = () => {
       justifyContent: "center",
       alignItems: "center",
       borderRadius: "10px",
-      border: "2px solid transparent", // Add a transparent border for initial state
+      border: "2px solid transparent", 
       "&:hover": {
         backgroundColor: "#B88E2F",
         color:"white",
-        borderColor: "#B88E2F", // Change the border color on hover
+        borderColor: "#B88E2F", 
       },
     }}
   >
@@ -66,11 +67,11 @@ const AllProducts = () => {
       justifyContent: "center",
       alignItems: "center",
       borderRadius: "10px",
-      border: "2px solid transparent", // Add a transparent border for initial state
+      border: "2px solid transparent", 
       "&:hover": {
         backgroundColor: "#B88E2F",
         color:"white",
-        borderColor: "#B88E2F", // Change the border color on hover
+        borderColor: "#B88E2F", 
       },
     }}
   >

@@ -5,15 +5,16 @@ import Furniture from "@/sections/home/furniture/furniture";
 import HomeHero from "@/sections/home/home-hero/homehero";
 import Products from "@/sections/home/Products/products";
 import Services from "@/sections/home/Rooms-Inspiration/rooms";
+import { Container } from "@mui/material";
 
 export default function HomePage() {
   return (
-    <div >
+    <Container >
       <HomeHero/>
       <Browse/>
       <Products/>
       <Services/>
       <Furniture/>
-    </div>
+    </Container>
   );
 }

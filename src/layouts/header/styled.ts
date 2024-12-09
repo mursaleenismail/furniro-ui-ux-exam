@@ -61,16 +61,37 @@ export const MenuBox = styled(Box)(({ theme }) => ({
   },
 }));
 
+// export const IconsBox = styled(Box)(({ theme }) => ({
+//   display: "flex",
+//   alignItems: "center",
+//   gap: "28px",
+
+//   [theme.breakpoints.down("xs")]: {
+//     display: "block",
+//   },
+//   [theme.breakpoints.down("sm")]: {
+//     display: "none",
+//   },
+// }));
+
 export const IconsBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   gap: "28px",
-
   [theme.breakpoints.down("xs")]: {
     display: "block",
   },
   [theme.breakpoints.down("sm")]: {
     display: "none",
+  },
+}));
+
+export const ClickableIcon = styled(Box)(({ theme }) => ({
+  cursor: "pointer",
+  transition: "transform 0.3s ease, color 0.3s ease",
+  "&:hover": {
+    transform: "scale(1.1)",
+    color: theme.palette.primary.main,
   },
 }));
 

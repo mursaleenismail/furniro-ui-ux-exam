@@ -1,15 +1,9 @@
 "use client";
-import * as React from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import * as React from "react";
 
 const Form = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -22,13 +16,21 @@ const Form = () => {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        backgroundColor: "rgba(0, 0, 0, 0.05)",
+      }}
+    >
       <Box
         sx={{
-          margin:"30px",
+          margin: "30px",
           display: "flex",
           flexDirection: "column",
-          justifyContent:"flex-end",
+          justifyContent: "flex-end",
           alignItems: "center",
           border: "3px solid #FFF",
           width: "55%",
@@ -124,7 +126,7 @@ const Form = () => {
             }}
           >
             {" "}
-           SUBMIT
+            SUBMIT
           </Button>
         </Box>
       </Box>

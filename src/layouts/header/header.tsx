@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link"; // Import Link from next/link
 import Image from "next/image";
 import Icon1 from "../../../public/Images/akar-icons_search.svg";
@@ -21,6 +21,7 @@ import {
   Typography,
 } from "@mui/material";
 import {
+  ClickableIcon,
   IconsBox,
   LIBox,
   LImage1,
@@ -29,6 +30,7 @@ import {
   StyledIconButton,
   StyledToolbar,
 } from "./styled";
+import { Shopcontext } from "@/context/shopcontext";
 
 interface Props {
   window?: () => Window;
@@ -39,12 +41,22 @@ const drawerWidth = 240;
 const Header = (props: Props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  // const shopContext = useContext(Shopcontext);
+
+  // if (!shopContext) {
+  //   return null;
+  // }
+
+  // const { setShowSearch } = shopContext;
+
   const [pagesArr] = React.useState([
     { name: "Home", path:"/" },
     { name: "Shop", path:"/shop" },
-    { name: "About", path:"/about" },
     { name: "Contact", path:"/contact" },
+    { name: "About", path:"/about" },
   ]);
+
+
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -123,12 +135,22 @@ const Header = (props: Props) => {
           </MenuBox>
 
           <IconsBox>
-            <Image src={Icon1} width={33} height={33} alt="" />
-            <Badge badgeContent={4} color="success">
-              <Image src={Icon2} width={23} height={23} alt="" />
-            </Badge>
-            <Image src={Icon3} width={23} height={23} alt="" />
-          </IconsBox>
+  <ClickableIcon >
+    <Image src={Icon1} width={33} height={33} alt="Search Icon" />
+  </ClickableIcon>
+ 
+    <ClickableIcon>
+      <Image src={Icon2} width={23} height={23} alt="Notification Icon" />
+    </ClickableIcon>
+  
+    <Badge badgeContent={4} color="warning">
+      <Link href="/cart" passHref>
+        <ClickableIcon style={{ cursor: "pointer" }}>
+          <Image src={Icon3} width={23} height={23} alt="Settings Icon" />
+        </ClickableIcon>
+      </Link>
+    </Badge>
+</IconsBox>
         </StyledToolbar>
       </StyledAppbar>
 
