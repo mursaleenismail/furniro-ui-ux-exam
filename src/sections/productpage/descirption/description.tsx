@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
-import { Container, Button, Typography, Box, Divider } from '@mui/material';
-import SofaImage from "../../../../public/ProductDetail/Sofaimage.png";
+"use client";
+import { Box, Button, Container, Divider, Typography } from '@mui/material';
+import Image from 'next/image';
+import { useState } from 'react';
 import Image1 from "../../../../public/ProductDetail/01.png";
 import Image2 from "../../../../public/ProductDetail/02.png";
-import Image from 'next/image';
 
 const WholeDetails = () => {
-  // State to manage active section
   const [activeSection, setActiveSection] = useState<'description' | 'additional' | 'reviews'>('description');
 
-  // Handler to change active section
   const handleSectionChange = (section: 'description' | 'additional' | 'reviews') => {
     setActiveSection(section);
   };
@@ -98,13 +96,12 @@ const WholeDetails = () => {
       </Box>
 
 
- {/* Parent Box for the two child boxes */}
  <Box
         sx={{
           display: 'flex',
           justifyContent:"center",
-          flexDirection: { xs: 'column', sm: 'row' }, // Flex direction switches based on screen size
-          gap: '10px', // Gap between the boxes
+          flexDirection: { xs: 'column', sm: 'row' }, 
+          gap: '10px',
           marginTop: 4,
         }}
       >
@@ -116,7 +113,7 @@ const WholeDetails = () => {
             justifyContent: 'center',
             alignItems: 'center',
             padding: 2,
-            width: { xs: '100%', sm: '48%' }, // Adjust width based on screen size
+            width: { xs: '100%', sm: '48%' }, 
             height: 300,
           }}
         >
@@ -124,7 +121,6 @@ const WholeDetails = () => {
           <Image src={Image2} alt="Image 1" style={{ maxWidth: '100%', maxHeight: '100%' }} />
         </Box>
 
-        {/* Child Box 2 */}
         <Box
           sx={{
             backgroundColor: '#F9F1E7',

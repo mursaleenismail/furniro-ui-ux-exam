@@ -27,7 +27,6 @@ const ProductPage = () => {
     );
   }
 
-  // Handle quantity increase/decrease
   const handleQuantityChange = (operation: string) => {
     if (operation === "increase") {
       setQuantity((prev) => prev + 1);
@@ -55,29 +54,21 @@ const ProductPage = () => {
             Price: {product.price}
           </Typography>
 
-
-  {/* Rating */}
   <Box sx={{ display: "flex", alignItems: "center", marginBottom: 2 }}>
             <Rating value={product.rating} precision={0.1} readOnly />
             <Typography variant="body2" sx={{ marginLeft: 1 }}>
               {product.rating} / 5
             </Typography>
           </Box>
-
-
          
           <Typography variant="body1" sx={{ marginBottom: 2 }}>
             {product.description || "No description available for this product."}
           </Typography>
          
-          
-        
-          {/* Size and Color */}
           <Box sx={{ marginBottom: 2 }}>
             <Typography variant="body1">Color: {product.color}</Typography>
 
 
-            {/* Add additional sizes data here if available */}
             <Typography variant="body1" sx={{color:"black"}}>Sizes</Typography>
 
             <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "start" }}>
@@ -131,11 +122,11 @@ const ProductPage = () => {
       justifyContent: "center",
       alignItems: "center",
       borderRadius: "10px",
-      border: "2px solid transparent", // Add a transparent border for initial state
+      border: "2px solid transparent", 
       "&:hover": {
         backgroundColor: "#B88E2F",
         color:"white",
-        borderColor: "#B88E2F", // Change the border color on hover
+        borderColor: "#B88E2F",
       },
     }}
   >
@@ -157,7 +148,6 @@ const ProductPage = () => {
     gap: "15px",
   }}
 >
-          {/* Quantity Box */}
           <Box sx={{ display: "flex", alignItems: "center", marginBottom: 2 }}>
             <IconButton onClick={() => handleQuantityChange("decrease")} sx={{ padding: 1 }}>
               <RemoveIcon />
@@ -170,7 +160,6 @@ const ProductPage = () => {
             </IconButton>
           </Box>
 
-          {/* Add to Cart Button */}
           <Button
             variant="contained"
             color="primary"
