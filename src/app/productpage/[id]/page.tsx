@@ -2,7 +2,6 @@
 import { useParams } from "next/navigation";
 import { allProductsData } from "@/Data/dummy";
 import { Box, Typography, Card, CardContent, CardMedia, Button, Rating, IconButton } from "@mui/material";
-import { styled } from "@mui/system";
 import { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
